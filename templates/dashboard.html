@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+
+<div class="container">
+
+    <h2 class="mb-4 text-center">Panel Principal</h2>
+
+    <!-- INSTRUCCIONES COMPLETAS -->
+    <div class="alert alert-info shadow">
+        <h4>📌 ¿Cómo usar el sistema?</h4>
+
+        <ol>
+            <li>
+                <b>Cifrar un mensaje:</b><br>
+                Ingresa a la opción <b>"Cifrar Texto"</b>, escribe el contenido que deseas proteger y presiona el botón para cifrar.
+            </li>
+
+            <li class="mt-2">
+                <b>Generación de token:</b><br>
+                El sistema generará un <b>token único</b>. Este token es necesario para poder visualizar el mensaje.
+            </li>
+
+            <li class="mt-2">
+                <b>Compartir token:</b><br>
+                Copia el token generado y compártelo con la persona que deseas que vea el mensaje.
+            </li>
+
+            <li class="mt-2">
+                <b>Uso del token:</b><br>
+                La otra persona deberá ingresar a <b>"Usar Token"</b>, pegar el token y podrá visualizar el mensaje.
+            </li>
+
+            <li class="mt-2">
+                <b>Importante:</b>
+                <ul>
+                    <li>El token solo puede utilizarse <b>una vez</b>.</li>
+                    <li>El token expira en un máximo de <b>7 días</b>.</li>
+                    <li>Si aparece <b>"Token inválido"</b>, ya no es posible acceder al mensaje.</li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+
+    <!-- SEGURIDAD -->
+    <div class="alert alert-warning shadow mt-3">
+        <h5>🔐 Seguridad del sistema</h5>
+        <ul>
+            <li>El cifrado se realiza en el servidor utilizando llaves pública y privada.</li>
+            <li>El sistema registra cada intento de uso del token.</li>
+            <li>Los mensajes eliminados no pueden ser visualizados nuevamente.</li>
+        </ul>
+    </div>
+
+    <!-- BOTONES -->
+    <div class="text-center mt-4">
+        <a href="/cifrar" class="btn btn-primary btn-lg m-2">🔐 Cifrar Texto</a>
+        <a href="/ver" class="btn btn-warning btn-lg m-2">🔎 Usar Token</a>
+        <a href="/historial" class="btn btn-info btn-lg m-2">📜 Historial</a>
+        <a href="/pendientes" class="btn btn-warning btn-lg m-2">📌 No abiertos</a>
+    </div>
+
+</div>
+
+{% endblock %}

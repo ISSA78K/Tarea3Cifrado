@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Historial del Token</h2>
+
+<table class="table table-dark">
+<tr>
+<th>Acción</th><th>Fecha</th><th>IP</th>
+</tr>
+
+{% for h in data %}
+<tr>
+<td>{{ h[3] }}</td>
+<td>{{ h[2] }}</td>
+<td>{{ h[4] }}</td>
+</tr>
+{% endfor %}
+
+</table>
+
+<a href="/historial" class="btn btn-light">Volver</a>
+
+{% endblock %}

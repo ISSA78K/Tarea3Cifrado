@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block title %}Cifrar Texto{% endblock %}
+
+{% block content %}
+
+<div class="container d-flex justify-content-center align-items-center" style="min-height: 80vh;">
+
+    <div class="card p-4 shadow" style="width: 500px;">
+
+        <h3 class="text-center mb-3">🔐 Cifrar Mensaje</h3>
+
+        <!-- INSTRUCCIÓN -->
+        <div class="alert alert-secondary">
+            Escribe el texto que deseas proteger. El sistema generará un token único que podrás compartir.
+        </div>
+
+        <!-- FORMULARIO -->
+        <form method="POST">
+
+            <textarea name="texto" 
+            class="form-control mb-3" 
+            style="height: 200px;" 
+            placeholder="Escribe aquí tu mensaje..." 
+            required></textarea>
+
+            <button class="btn btn-primary w-100">Cifrar</button>
+
+        </form>
+
+        <!-- BOTÓN VOLVER -->
+        <div class="text-center mt-3">
+            <a href="/dashboard" class="btn btn-light">Volver</a>
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

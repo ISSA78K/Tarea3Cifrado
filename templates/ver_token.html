@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}Usar Token{% endblock %}
+
+{% block content %}
+
+<div class="container d-flex justify-content-center align-items-center" style="min-height: 80vh;">
+
+    <div class="card p-4 shadow" style="width: 700px;">
+
+        <h3 class="text-center mb-3">🔎 Usar Token</h3>
+
+        <!-- INSTRUCCIÓN -->
+        <div class="alert alert-warning">
+            Ingresa el token recibido para visualizar el mensaje. 
+            <br><b>Recuerda:</b> solo puede utilizarse una vez.
+        </div>
+
+        <!-- FORMULARIO -->
+        <form method="POST">
+
+            <input type="text" 
+                   name="token" 
+                   class="form-control mb-3" 
+                   placeholder="Ingresa el token aquí..." 
+                   required>
+
+            <button class="btn btn-warning w-100">Ver mensaje</button>
+
+        </form>
+
+        <!-- BOTÓN VOLVER -->
+        <div class="text-center mt-3">
+            <a href="/" class="btn btn-light">Volver</a>
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

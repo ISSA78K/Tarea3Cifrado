@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>{{ titulo if titulo else "Historial" }}</h2>
+
+<table class="table table-dark">
+<tr>
+<th>Token</th><th>Estado</th><th>Fecha</th><th>Acción</th>
+</tr>
+
+{% for m in data %}
+<tr>
+<td>{{ m[3] }}</td>
+<td>{{ m[4] }}</td>
+<td>{{ m[5] }}</td>
+<td>
+<a href="/historial_detalle/{{ m[3] }}" class="btn btn-primary btn-sm">Detalle</a>
+<a href="/eliminar/{{ m[3] }}" class="btn btn-danger btn-sm">Eliminar</a>
+</td>
+</tr>
+{% endfor %}
+</table>
+
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container text-center">
+    <div class="card p-4 shadow" style="max-width:500px;margin:auto;">
+        <h3>Resultado</h3>
+
+        <div class="alert alert-success">
+            {{ mensaje }}
+        </div>
+
+        {% if usuario %}
+        <div class="alert alert-info">
+            Ingresado por: {{ usuario }}
+        </div>
+        {% endif %}
+
+        <a href="/dashboard" class="btn btn-light">Volver</a>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container d-flex justify-content-center align-items-center" style="min-height: 80vh;">
+
+    <div class="card p-4 shadow" style="width: 400px;">
+
+        <h3 class="text-center mb-3">Registro</h3>
+
+        <form method="POST">
+            <input type="text" name="username" placeholder="Usuario" class="form-control mb-3" required>
+            <input type="password" name="password" placeholder="Contraseña" class="form-control mb-3" required>
+            <button class="btn btn-success w-100">Registrarse</button>
+        </form>
+
+        <div class="text-center mt-3">
+            <a href="/">Volver al login</a>
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}
